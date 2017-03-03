@@ -1,0 +1,25 @@
+<div class="login-wrap animated fadeInUp">
+	<div class="login-content">
+		<div class="box-login">
+			<div class="logo-wrapper">	
+				<img src="assets/img/logo-text-gray1.png">
+			</div>
+			<form class="login-form animated" name="loginForm" novalidate ng-class="loginForm.$submitted && loginForm.username.$invalid || loginForm.$submitted && loginForm.password.$invalid ? 'shake' : ''">
+				<span class="error-message" ng-show="loginForm.$submitted && loginForm.username.$invalid || loginForm.$submitted && loginForm.password.$invalid || error_login">Username &amp; Password doesn't match!</span>
+				<div class="form-group">
+					<label class="sr-only">Username</label>
+					<input type="email" name="username" ng-model="user.username" class="form-control" placeholder="Email Address" required autocomplete="off">
+				</div>
+				<div class="form-group">
+					<label class="sr-only">Password</label>
+					<input type="password" name="password" ng-model="user.password" class="form-control" placeholder="Password" required>
+				</div>
+				<button type="submit" class="btn btn-block btn-primary" id="button-login" ng-click="login(user)">Log In</button>
+
+				<div class="footer">
+					Don't have account? <a ui-sref="signup">Sign up</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

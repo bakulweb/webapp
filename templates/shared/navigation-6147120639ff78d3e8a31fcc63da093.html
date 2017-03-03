@@ -1,0 +1,7 @@
+<ul id="navigation">
+	<li><a ui-sref="app.dashboard" ui-sref-active="active">Dashboard</a></li>
+	<li><a ui-sref="app.product.list" ng-class="{active: ('app.product.list' | includedByState) || ('app.product.category' | includedByState) || ('app.product.add' | includedByState)}">Products</a></li>
+	<li><a ui-sref="app.customer.list" ui-sref-active="active">Customers</a></li>
+	<li><a ui-sref="app.product.list" ui-sref-active="">Reports</a></li>
+	<li><a ui-sref="app.setting" ui-sref-active="active">Settings</a></li>
+</ul>	

@@ -1,0 +1,10 @@
+<div class="page-header">
+	<!-- <div class="page-header--title">Catalog</div> -->
+	<div class="page-header--navigation">
+		<a ui-sref="app.product.list" ng-class="{active: ('app.product.list' | includedByState) || ('app.product.add' | includedByState)}">Products</a>
+		<a ui-sref="app.product.category" ui-sref-active="active">Categories</a>
+		<a href="#/app/dashboard" ui-sref-active="active">Brands</a>
+		<a href="#/app/dashboard" ui-sref-active="active">Product Tags</a>
+	</div>
+</div>
+<div ui-view></div>

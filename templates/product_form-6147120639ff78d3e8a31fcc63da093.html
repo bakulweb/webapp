@@ -1,0 +1,162 @@
+<div class="half-layout--form">
+	<form class="form" name="catalogForm">
+		<fieldset class="form-fieldset">
+			<legend class="form-legend">General</legend>
+			<table class="table-form table-form--horizontal">
+				<tbody>
+					<tr>
+						<td>
+							<label class="control-label">Name</label>
+						</td>
+						<td>
+							<input type="text" class="form-control" placeholder="Product Name">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="control-label">Category</label>
+						</td>
+						<td>
+							<input type="text" class="form-control">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="">Unit</label>
+						</td>
+						<td>
+							<input type="text" class="form-control" placeholder="Unit">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="">Price</label>
+						</td>
+						<td>
+							<input type="text" class="form-control" placeholder="Selling Price">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="">Brand</label>
+						</td>
+						<td>
+							<input type="text" class="form-control">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="">Product Tags</label>
+						</td>
+						<td>
+							<input type="text" class="form-control">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="">Label</label>
+						</td>
+						<td>
+							<input type="text" class="form-control">
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</fieldset>
+
+		<!-- <fieldset class="form-fieldset hidden">
+			<legend class="form-legend">Options</legend>
+			<table class="table-form">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>						
+							<input type="text" name="" class="form-control" placeholder="Option Name">
+						</td>
+						<td>						
+							<input type="text" name="" class="form-control" placeholder="Selling Price">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset> -->
+
+		<fieldset class="form-fieldset">
+			<legend class="form-legend">Inventory</legend>
+			<table class="table-form">
+				<thead>
+					<tr>
+						<th>Outlet</th>
+						<th>Stock</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="outlet in outlets">
+						<td class="table-form--label" ng-bind="outlet.name"></td>
+						<td>						
+							<input type="number" name="" class="form-control" placeholder="Stock Quantity">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+
+		<!-- <div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" name="" class="form-control">
+		</div> -->
+
+		<div class="row">			
+			<div class="col-md-6">
+				<a ui-sref="app.product.list">Back</a>
+			</div>
+			<div class="col-md-6 text-right">
+				<button type="submit" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,105 @@
+<div class="container register-page">
+	<form method="POST" name="signupForm" novalidate>
+		<h3 class="fieldset-label">User Info</h3>
+		<div class="row">
+			<div class="col-sm-6">			
+				<div class="form-group" ng-class="signupForm.$submitted && signupForm.full_name.$error.required ? 'has-error' : ''">
+					<label class="control-label">Name</label>
+					<input type="text" name="full_name" ng-model="registration.fullName" class="form-control" required>
+					<span class="help-block" ng-show="signupForm.$submitted && signupForm.full_name.$error.required">Name is required</span>
+				</div>
+			</div>
+			<div class="col-sm-6">			
+				<div class="form-group" ng-class="signupForm.$submitted && signupForm.username.$invalid || username_exist ? 'has-error' : ''">
+					<label class="control-label">Email</label>
+					<input type="email" name="username" ng-model="registration.username" class="form-control" required>
+					<span class="help-block" ng-show="signupForm.$submitted && signupForm.username.$invalid">Email is required</span>
+					<span class="help-block">{{username_exist}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">		
+			<div class="col-sm-6">			
+				<div class="form-group" ng-class="signupForm.$submitted && signupForm.password.$error.required || min_length ? 'has-error' : ''">
+					<label class="control-label">Password</label>
+					<input type="password" name="password" ng-model="registration.password" class="form-control" required>
+					<span class="help-block" ng-show="signupForm.$submitted && signupForm.password.$error.required">Password is required</span>
+					<span class="help-block">{{min_length}}</span>
+				</div>
+			</div>
+			<div class="col-sm-6" ng-class="signupForm.$submitted && signupForm.password_confirmation.$error.required || confpassword_match || min_length ? 'has-error' : ''">			
+				<div class="form-group">
+					<label class="control-label">Confirm Password</label>
+					<input type="password" name="password_confirmation" ng-model="registration.confPassword" class="form-control" required>
+					<span class="help-block" ng-show="signupForm.$submitted && signupForm.password_confirmation.$error.required">Confirm Password is required</span>
+					<span class="help-block">{{confpassword_match}}</span>
+					<span class="help-block">{{min_length}}</span>
+				</div>
+			</div>
+		</div>
+
+		<h3 class="fieldset-label">Store Info</h3>
+		<div class="row">
+			<div class="col-sm-6">			
+				<div class="form-group" ng-class="signupForm.$submitted && signupForm.store_name.$error.required || storename_exist ? 'has-error' : ''">
+					<label class="control-label">Store Name</label>
+					<input type="text" name="store_name" ng-model="registration.storeName" class="form-control" required>
+					<span class="help-block" ng-show="signupForm.$submitted && signupForm.store_name.$error.required">Store name is required</span>
+					<span class="help-block">{{storename_exist}}</span>
+				</div>
+			</div>
+			<div class="col-sm-6">			
+				<div class="form-group" ng-class="signupForm.$submitted && signupForm.business_type.$error.required ? 'has-error' : ''">
+					<label class="control-label">Business Type</label>
+					<select name="business_type" ng-model="registration.businessTypes" ng-options="item for item in businessTypes" class="form-control" required>
+						<option value="">--</option>
+					</select>
+					<span class="help-block" ng-show="signupForm.$submitted && signupForm.business_type.$error.required">Business type is required</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">			
+				<div class="form-group" ng-class="signupForm.$submitted && signupForm.mobile_number.$error.required ? 'has-error' : ''">
+					<label class="control-label">Mobile Number</label>
+					<input type="text" name="mobile_number" ng-model="registration.mobileNumber" class="form-control" required>
+					<span class="help-block" ng-show="signupForm.$submitted && signupForm.mobile_number.$error.required">Mobile number is required</span>
+				</div>
+			</div>
+			<div class="col-sm-6">			
+				<div class="form-group" ng-class="signupForm.$submitted && signupForm.province.$error.required ? 'has-error' : ''">
+					<label class="control-label">Province</label>
+					<select name="province" ng-model="registration.province" class="form-control" ng-options="province.id as province.name for province in provinces" required>
+						<option value="">--</option>
+					</select>
+					<span class="help-block" ng-show="signupForm.$submitted && signupForm.province.$error.required">Province is required</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group" ng-class="signupForm.$submitted && signupForm.business_address.$error.required ? 'has-error' : ''">					
+					<label class="control-label">Business Location / Address</label>
+					<textarea name="business_address" rows="3" ng-model="registration.address" class="form-control"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div class="row button-submit">
+			<div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+				<button type="submit" id="button-signup" ng-click="signupForm.$valid ? signup(registration) : ''" class="btn btn-block btn-primary">Create Account</button>
+			</div>
+		</div>
+	</form>
+
+	<div class="footer-register">		
+		Already have account? <a ui-sref="login">Log in</a>
+	</div>
+</div>
+
+<footer id="footer">
+	<div class="container register-page">
+		<p class="copyright">&copy; 2017 Brillpos.</p>		
+	</div>
+</footer>

@@ -1,0 +1,7 @@
+<div class="page-header">
+	<div class="page-header--navigation">
+		<a ui-sref="app.product.category" ui-sref-active="active">General</a>
+		<a ui-sref="app.product.list" ng-class="{active: ('app.setting.outlet' | includedByState) || ('app.setting.outlet.add' | includedByState)}">Outlets</a>
+	</div>
+</div>
+<div ui-view></div>

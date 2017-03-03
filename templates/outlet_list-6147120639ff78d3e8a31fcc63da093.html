@@ -1,0 +1,27 @@
+<div class="actions-bar row">
+	<div class="actions-bar--search col-sm-6">
+		<input type="text" name="search" ng-model="search" class="form-control form-control--search">
+		<i class="icon-search ion-ios-search-strong"></i>
+	</div>	
+	<div class="actions-bar--button col-sm-6">
+		<a ui-sref="app.setting.outlet.add" class="btn btn-primary">Add Outlet</a>		
+	</div>
+</div>
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Address</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="outlet in outlets | filter: search">
+			<td ng-bind="outlet.name"></td>
+			<td ng-bind="outlet.address"></td>
+		</tr>
+		<tr ng-if="outlets.length == 0">
+			<td colspan="2" class="text-center" style="font-style: italic;">No Results</td>
+		</tr>
+	</tbody>
+</table>

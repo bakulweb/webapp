@@ -1,0 +1,61 @@
+body {
+	padding-top: 0;
+}
+.register-page {
+	max-width: 660px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.fieldset-label {
+	position: relative;
+	padding-bottom: 8px;
+}
+.fieldset-label:after {
+	width: 100%;
+	background-color: #e0e0e0;
+	height: 1px;
+	content: ' ';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+textarea.form-control {
+	resize: vertical;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.row {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+div[class*="col-"] {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.footer-register {
+	text-align: center;
+	margin-top: 20px;
+}
+.button-submit {
+	margin-top: 25px;
+}
+.btn {
+	height: 40px;
+	padding: 0 10px;
+	font-weight: 600;
+}
+#footer {
+	font-size: 14px;
+	background-color: #ededed;
+	padding-top: 80px;
+	padding-bottom: 40px;
+}
+#footer .register-page {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#footer .copyright {
+	color: #a1a1a1;
+	text-align: center;
+	font-weight: 600;
+}

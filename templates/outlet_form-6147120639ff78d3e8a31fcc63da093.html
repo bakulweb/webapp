@@ -1,0 +1,36 @@
+<div class="half-layout--form">
+	<form class="form" name="catalogForm">
+		<fieldset class="form-fieldset">
+			<legend class="form-legend">General</legend>
+			<table class="table-form table-form--horizontal">
+				<tbody>
+					<tr>
+						<td>
+							<label class="control-label">Name</label>
+						</td>
+						<td>
+							<input type="text" ng-model="outlet.name" class="form-control" placeholder="Outlet Name">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="control-label">Address</label>
+						</td>
+						<td>
+							<textarea class="form-control" ng-model="outlet.address" placeholder="Street Address"></textarea>
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</fieldset>
+
+		<div class="row">			
+			<div class="col-md-6">
+				<a ui-sref="app.setting.outlet">Back</a>
+			</div>
+			<div class="col-md-6 text-right">
+				<button type="submit" class="btn btn-primary" ng-click="addOutlet(outlet)">Save</button>
+			</div>
+		</div>
+	</form>
+</div>

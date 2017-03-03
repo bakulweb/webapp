@@ -1,0 +1,71 @@
+html, body, div[ui-view] {
+	height: 100%;
+}
+body {
+	background-color: #fafafa;
+	padding-top: 0;
+}
+.animated {
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+}
+.logo-wrapper {
+	text-align: center;
+}
+.error-message {
+	text-align: center;
+	color: #F44336;
+	margin-bottom: 10px;
+	display: block;
+	width: 100%;
+}
+.login-wrap {
+	display: table;
+	height: 100%;
+	max-width: 420px;
+	width: 100%;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+.login-content {
+	display: table-row;
+}
+.box-login {
+	display: table-cell;
+	vertical-align: middle;
+}
+.login-form {	
+	border-radius: 4px;
+	padding: 30px;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 0;
+}
+.form-group > .form-control {
+	height: 50px;
+	padding: 0 15px;
+	border-radius: 3px 3px 0 0;
+}
+.form-group + .form-group > .form-control {
+  border-radius: 0 0 3px 3px;
+}
+.form-group + .form-group {
+  margin-top: -1px;
+  margin-bottom: 15px;
+}
+.form-control:focus {
+	background-color: #fafcfc;
+  border-color: #ccc;
+}
+.btn {
+	height: 50px;
+	padding: 0 15px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.footer {
+	margin-top: 20px;
+	text-align: center;
+}
